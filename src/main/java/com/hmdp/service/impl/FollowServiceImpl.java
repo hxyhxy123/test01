@@ -45,7 +45,7 @@ public class FollowServiceImpl extends ServiceImpl<FollowMapper, Follow> impleme
             //关注 新增数据
             Follow follow=new Follow();
             follow.setFollowUserId(followUserId);
-            System.out.println("asa");
+            System.out.println("a");
             follow.setUserId(id);
             boolean isSuccess = save(follow);
             if (isSuccess){
