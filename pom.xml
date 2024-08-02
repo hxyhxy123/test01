@@ -59,6 +59,16 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.8</version>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit</artifactId>
+            <version>4.4.1.201607150455-r</version>
+        </dependency>
+        <dependency>
+            <groupId>org.gitective</groupId>
+            <artifactId>gitective-core</artifactId>
+            <version>0.9.9</version>
+        </dependency>
         <!--redisson-->
         <dependency>
             <groupId>org.redisson</groupId>
