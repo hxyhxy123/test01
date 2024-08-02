@@ -51,6 +51,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
                 .page(new Page<>(current, SystemConstants.MAX_PAGE_SIZE));
         // 获取当前页数据
         List<Blog> records = page.getRecords();
+        System.out.println("aa");
         // 查询用户
         records.forEach(blog -> {
             queryBlogUser(blog);
@@ -69,6 +70,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
         }
         queryBlogUser(blog);
         isBlogLiked(blog);
+        System.out.println("bb");
         return Result.ok(blog);
     }
 
