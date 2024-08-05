@@ -70,7 +70,6 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
         }
         queryBlogUser(blog);
         isBlogLiked(blog);
-        System.out.println("bb");
         return Result.ok(blog);
     }
 
