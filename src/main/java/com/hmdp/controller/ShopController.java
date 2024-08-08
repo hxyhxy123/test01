@@ -53,6 +53,8 @@ public class ShopController {
     public Result saveShop(@RequestBody Shop shop) {
         // 写入数据库
         shopService.shopInsert(shop);
+        System.out.println("aaa00");
+        System.out.println('s');
         return Result.ok();
     }
 
