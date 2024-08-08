@@ -58,6 +58,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             //手机号不符合
             return Result.fail("手机号格式错误");
         }
+        System.out.println("aa");
         //手机号符合,生成验证码
         String code = RandomUtil.randomNumbers(6);
         /*//保存验证码到session
@@ -108,6 +109,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
                         ));
         //保存用户信息到redis
         stringRedisTemplate.opsForHash().putAll(LOGIN_USER_KEY + token, map);
+        System.out.println("bb");
         //设置过期时间
         stringRedisTemplate.expire(LOGIN_USER_KEY + token, LOGIN_USER_TTL, TimeUnit.MINUTES);
         return Result.ok(token);
