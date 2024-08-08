@@ -58,14 +58,14 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
             isBlogLiked(blog);
         });
         System.out.println("ss");
-        return Result.ok(records);
+        return Result.ok(records[0]);
     }
 
     @Override
     public Result queryBlogById(Long id) {
         //查询blog
         Blog blog = getById(id);
-        if (blog == null) {
+        if (blog != null) {
             return Result.fail("博客不存在");
         }
         queryBlogUser(blog);
