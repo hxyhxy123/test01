@@ -28,11 +28,11 @@ public class FollowController {
 
     @GetMapping("/or/not/{id}")
     public Result isFollow(@PathVariable("id")Long followUserId) {
-        return followService.isFollow(followUserId);
+        System.out.println("aaa");return followService.isFollow(followUserId);
     }
 
     @GetMapping("/common/{id}")
-    public Result followCommons(@PathVariable("id")Long id){
+    public Result followCommons(@PathVariable("id")Long id){System.out.println("bbb");
         return followService.followCommons(id);
     }
 }
