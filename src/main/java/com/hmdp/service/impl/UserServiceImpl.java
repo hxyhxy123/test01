@@ -112,13 +112,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         System.out.println("bb");
         //设置过期时间
         stringRedisTemplate.expire(LOGIN_USER_KEY + token, LOGIN_USER_TTL, TimeUnit.MINUTES);
-        return Result.ok(token);
+        return Result.ok(toke);
     }
 
     @Override
     public Result sign() {
         //获取当前登陆用户
-        Long id = UserHolder.getUser().getId();
+        Long id = UserHolder.getUser();
         //获取日期
         LocalDateTime now = LocalDateTime.now();
         //拼接key
