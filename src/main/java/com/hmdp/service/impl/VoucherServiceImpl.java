@@ -38,12 +38,13 @@ public class VoucherServiceImpl extends ServiceImpl<VoucherMapper, Voucher> impl
         // 查询优惠券信息
         List<Voucher> vouchers = getBaseMapper().queryVoucherOfShop(shopId);
         // 返回结果
-        return Result.ok(vouchers);
+        return Result.ok(vouchers[0]);
     }
 
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void addSeckillVoucher(Voucher voucher) {
+        System.out.println("cc");
         // 保存优惠券
         save(voucher);
         // 保存秒杀信息
