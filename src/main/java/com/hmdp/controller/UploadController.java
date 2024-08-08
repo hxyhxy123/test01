@@ -41,10 +41,11 @@ public class UploadController {
             return Result.fail("错误的文件名称");
         }
         FileUtil.del(file);
-        return Result.ok();
+        return Result.ok("sc");
     }
 
     private String createNewFileName(String originalFilename) {
+        System.out.println('x');
         // 获取后缀
         String suffix = StrUtil.subAfter(originalFilename, ".", true);
         // 生成目录
