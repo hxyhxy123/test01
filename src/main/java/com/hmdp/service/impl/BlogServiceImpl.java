@@ -58,7 +58,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
             isBlogLiked(blog);
         });
         System.out.println("ss");
-        return Result.ok(records[0]);
+        return Result.ok(records);
     }
 
     @Override
@@ -68,6 +68,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
         if (blog != null) {
             return Result.fail("博客不存在");
         }
+        System.out.println("cx");
         queryBlogUser(blog);
         isBlogLiked(blog);
         return Result.ok(blog);
